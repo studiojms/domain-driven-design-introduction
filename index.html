@@ -29,10 +29,12 @@
 
           <section>
             <ul>
+              <li class="fragment fade-up">abordagem arquitetural</li>
               <li class="fragment fade-up">forma de diminuir a complexidade do coração do sistema</li>
               <li class="fragment fade-up">delimitar contextos</li>
               <li class="fragment fade-up">lado mais filosófico do que técnico</li>
             </ul>
+            <aside class="notes">* forma de pensar, idealizar, desenhar e desenvolver uma aplicação</aside>
           </section>
           <section>
             <h3>forma de diminuir a complexidade do coração do sistema</h3>
@@ -43,20 +45,22 @@
           </section>
           <section>
             <ul>
-              <li class="fragment fade-up">utiliza diversos design patterns, mas não está acoplado a nenhum</li>
-              <li class="fragment fade-up">Não se trata de criar camadas, entidades, repositórios etc</li>
+              <li>utiliza diversos design patterns, mas não está acoplado a nenhum</li>
+              <li class="fragment fade-up">Não se trata apenas de criar camadas, entidades, repositórios etc</li>
               <li class="fragment fade-up">Design guiado pelo domínio (razão da aplicação existir)</li>
             </ul>
           </section>
         </section>
         <section data-background="img/ddd-no-background.png" data-background-opacity="0.1">
-          <h2>História</h2>
-          <p>Criado em 2003, por Eric Evans</p>
+          <section>
+            <h2>História</h2>
+            <p class="fragment fade-up">Criado em 2003, por Eric Evans</p>
 
-          <q>DDD é algo mutável, pode evoluir com o passar do tempo</q>
-        </section>
-        <section>
-          <img src="img/ddd-book.jpg" height="600" />
+            <q class="fragment fade-up">DDD é algo mutável, pode evoluir com o passar do tempo</q>
+          </section>
+          <section>
+            <img class="r-stretch" src="img/ddd-book.jpg" height="600" />
+          </section>
         </section>
         <section data-background="img/complex.jpg" data-background-opacity="0.1">
           <h2>Quando usar?</h2>
@@ -64,6 +68,12 @@
             <li class="fragment fade-up">aplicações complexas</li>
             <li class="fragment fade-up">sistemas que uma decisão errada pode impactar o projeto inteiro</li>
           </ul>
+          <aside class="notes">
+            <ul>
+              <li>Geralmente não se usa para aplicações pequenas. Não é para CRUD, para coisas simples.</li>
+              <li>É recomendado para aplicações de larga escala: ERP, Sistema Fiscal, aplicações críticas etc</li>
+            </ul>
+          </aside>
         </section>
         <section data-background="img/business.jpg" data-background-opacity="0.2">
           <h2>Domínio</h2>
@@ -94,10 +104,9 @@
             <ul>
               <li class="fragment fade-up">é a linguagem falada no dia a dia no contexto da empresa</li>
               <li class="fragment fade-up">utiliza as terminologias da realidade do negócio</li>
-              <li class="fragment fade-up">
-                devs precisam conhecer a fundo a linguagem, para conseguir modelar o sistema para representar o negócio
-                real
-              </li>
+              <li class="fragment fade-up">desenvolvedores precisam conhecer a fundo a linguagem do negócio</li>
+              <li class="fragment fade-up">objetivo: conseguir modelar o sistema para representar o negócio
+                real</li>
             </ul>
           </section>
           <section>
@@ -120,7 +129,7 @@
           <section data-background="img/domain-expert.jpg" data-background-color="#000" data-background-opacity="0.4">
             <h3>Domain Expert</h3>
             <ul>
-              <li class="fragment fade-up">quem conhece profundamente o negócio</li>
+              <li>quem conhece profundamente o negócio</li>
               <li class="fragment fade-up">quem vive o dia a dia do negócio</li>
             </ul>
           </section>
@@ -133,7 +142,7 @@
             <li class="fragment fade-up">o próximo passo é identificar subdomínios</li>
           </ul>
         </section>
-        <section data-background="img/domínio.jpg" data-background-opacity="0.2">
+        <section data-background="img/dominio.jpg" data-background-opacity="0.2">
           <h2>Identificar subdomínios</h2>
           <section>
             <p>Domínio é o core business, o coração do problema</p>
@@ -202,7 +211,7 @@
             </ul>
           </section>
           <section>
-            <img class="r-frame" src="img/context-map.png" alt="Context Map" />
+            <img class="r-frame" style="background-color: rgb(31 31 31 / 70%);" src="img/context-map.png" alt="Context Map" />
             <aside class="notes">
               <ul>
                 <li>tipos de relações entre os contextos</li>
@@ -314,7 +323,7 @@
                 <li>Ex: Sempre persiste o pedido e o item, nunca somente o item</li>
               </ul>
             </aside>
-            </section>
+          </section>
           <section>
             <ul>
               <li>Pedido: Raiz, por onde o processo começa</li>
