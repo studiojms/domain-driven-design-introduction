@@ -114,10 +114,10 @@
             <img src="img/ubiquitous-2.png" />
           </section>
           <section>
-            <h3>Domain Expert</h3>
-            <img src="img/expert.png" />
+            <h3 style="margin-top: 90px">Domain Expert</h3>
+            <img class="r-stretch" src="img/expert.png" />
           </section>
-          <section>
+          <section data-background="img/domain-expert.jpg" data-background-color="#000" data-background-opacity="0.4">
             <h3>Domain Expert</h3>
             <ul>
               <li class="fragment fade-up">quem conhece profundamente o negócio</li>
@@ -125,11 +125,16 @@
             </ul>
           </section>
         </section>
-        <section data-background="img/dominio.jpg" data-background-opacity="0.2">
+        <section data-background="img/ddd-color.jpg" data-background-opacity="0.2">
+          <img src="img/ddd-car.jpg" class="r-frame" />
+          <ul>
+            <li>Com a comunicação em ordem</li>
+            <li class="fragment fade-up">Domínio bem definido</li>
+            <li class="fragment fade-up">o próximo passo é identificar subdomínios</li>
+          </ul>
+        </section>
+        <section data-background="img/domínio.jpg" data-background-opacity="0.2">
           <h2>Identificar subdomínios</h2>
-          <section>
-            <p>Com a comunicação em ordem, o próximo passo é identificar subdomínios</p>
-          </section>
           <section>
             <p>Domínio é o core business, o coração do problema</p>
           </section>
@@ -142,143 +147,192 @@
             <aside class="notes">
               ex: netflix
               <ul>
-                <li>dominio principal: video</li>
-                <li>sub dominio: negociar licenciamento com empresas (Warner, Paramount)</li>
-                <li>sub dominio: fechar contratos</li>
-                <li>sub dominio: transcoding do video</li>
+                <li>domínio principal: video</li>
+                <li>sub domínio: negociar licenciamento com empresas (Warner, Paramount)</li>
+                <li>sub domínio: fechar contratos</li>
+                <li>sub domínio: transcoding do video</li>
               </ul>
             </aside>
           </section>
         </section>
-        <section>
+        <section data-background="img/contexts.jpg" data-background-opacity="0.2">
           <h2>Identificar contextos da empresa</h2>
           <section>
             <ul>
-              <li class="fragment fade-up">cada contexto tem sua própria forma, sua propria linguagem</li>
-              <li class="fragment fade-up">as complexidades mudam de acordo com cada uma das areas</li>
-              <li class="fragment fade-up">lugares que usam o mesmo nome para coisas diferentes</li>
-              <li class="fragment fade-up">ou coisas diferentes utilizando o mesmo nome</li>
+              <li class="fragment fade-up">cada contexto tem sua própria forma, sua própria linguagem</li>
+              <li class="fragment fade-up">as complexidades mudam de acordo com cada uma das áreas</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>lugares que usam o mesmo nome para coisas diferentes</li>
+                <li>ou coisas diferentes utilizando o mesmo nome</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <img class="r-frame" src="img/bounded-context.jpg" alt="bounded context" />
+          </section>
+        </section>
+        <section data-background="img/context-communication.jpg" data-background-opacity="0.2">
+          <h2>Comunicação entre os contextos</h2>
+          <section>
+            <ul>
+              <li class="fragment fade-up">
+                apesar de cada contexto ser delimitado, geralmente um precisa se relacionar com o outro
+              </li>
+            </ul>
+          </section>
+          <section>
+            <ul>
+              <li>identificar quais são as partes do domínio principal</li>
+              <li class="fragment fade-up">identificar quais são os domínios auxiliares</li>
+              <li class="fragment fade-up">identificar relações entre os domínios</li>
             </ul>
           </section>
         </section>
-        <section>
-          <h2>Comunicação entre os contextos</h2>
-          <ul>
-            <li class="fragment fade-up">quais são as partes do dominio principal</li>
-            <li class="fragment fade-up">quais são os dominios auxiliares?</li>
-            <li class="fragment fade-up">relações entre os Domínios</li>
-          </ul>
-        </section>
-        <section>
+        <section data-background="img/relationship.jpg" data-background-opacity="0.2">
           <h2>Mapa de contexto</h2>
-          <ul>
-            <li class="fragment fade-up">mapa que detalha a relação entre os dominios</li>
-            <li class="fragment fade-up">possibilita uma visão geral do sistema</li>
-            <li class="fragment fade-up">separar os pontos de complexidade</li>
-            <li class="fragment fade-up">identificar pontos auxiliares para o sistema</li>
-            <li class="fragment fade-up">conseguir atacar o que realmente importa</li>
-          </ul>
+          <section>
+            <ul>
+              <li class="fragment fade-up">mapa que detalha a relação entre os domínios</li>
+              <li class="fragment fade-up">possibilita uma visão geral do sistema</li>
+              <li class="fragment fade-up">separar os pontos de complexidade</li>
+              <li class="fragment fade-up">identificar pontos auxiliares para o sistema</li>
+              <li class="fragment fade-up">conseguir atacar o que realmente importa</li>
+            </ul>
+          </section>
+          <section>
+            <img class="r-frame" src="img/context-map.png" alt="Context Map" />
+            <aside class="notes">
+              <ul>
+                <li>tipos de relações entre os contextos</li>
+                <li>ex: sistema de pagamento (paypal, pagseguro)</li>
+                <li>relação de conformidade: preciso de uma camada anti-corrupção ali</li>
+              </ul>
+            </aside>
+          </section>
         </section>
-        <section>
+        <section data-background="img/ddd-capa.jpg" data-background-opacity="0.2">
           <h2>Resumindo: Pilares do DDD</h2>
           <ul>
             <li class="fragment fade-up">linguagem ubíqua</li>
-            <li class="fragment fade-up">contextos delimitados (bounded contexts) - até onde vai a reponsabilidade de cada parte do sistema</li>
-            <li class="fragment fade-up">mapas de contexto</li>
+            <li class="fragment fade-up">
+              contextos delimitados (bounded contexts) - até onde vai a reponsabilidade de cada parte do sistema
+            </li>
+            <li class="fragment fade-up">mapas de contexto - comunicação entre os contextos</li>
           </ul>
         </section>
-        <section>
+        <section data-background="img/code.jpeg" data-background-opacity="0.2">
           <h2>E no código?</h2>
           <section>
             <ul>
               <li class="fragment fade-up">Entidades</li>
-              <li class="fragment fade-up">Value Objects</li>
-              <li class="fragment fade-up">Aggregations</li>
-              <li class="fragment fade-up">Repositorios</li>
-              <li class="fragment fade-up">Services</li>
+              <li class="fragment fade-up">Objetos de Valor</li>
+              <li class="fragment fade-up">Agregações</li>
+              <li class="fragment fade-up">Repositórios</li>
+              <li class="fragment fade-up">Serviços</li>
             </ul>
           </section>
           <section>
-            <h5>tudo baseado na linguagem criada antes de chegar no código</h5>
-            <h5>só começa o código quando a complexidade for definida e entendida</h5>
+            <ul>
+              <li class="fragment fade-up">tudo baseado na linguagem criada antes de chegar no código</li>
+              <li class="fragment fade-up">só começa o código quando a complexidade for definida e entendida</li>
+            </ul>
           </section>
-          <section>
-            <h5>a maior parte do esforço vai na parte de entender a complexidade</h5>
+          <section data-background="img/effort.jpg" data-background-opacity="0.4">
+            <ul>
+              <li>a maior parte do esforço vai na parte de entender a complexidade</li>
+            </ul>
           </section>
         </section>
-        <section>
+        <section data-background="img/dominio.jpg" data-background-opacity="0.2">
           <h2>Entidade</h2>
           <section>
             <ul>
-              <li class="fragment fade-up">algo unico no sistema, com representatividade no negócio</li>
-              <li class="fragment fade-up">existe no meu sistema, pode mudar seu estado e possui uma identidade unica</li>
-              <li class="fragment fade-up">este item geralmente possui um id (que não existe por existir, mas para diferenciar um do outro)</li>
-              <li class="fragment fade-up">é um dominio rico, tem uma razão de existir</li>
+              <li class="fragment fade-up">algo único no sistema, com representatividade no negócio</li>
+              <li class="fragment fade-up">existe no sistema, pode mudar seu estado</li>
               <li class="fragment fade-up">
-                entidade não existe para ser persistida... persistencia é outro problema que acaba sendo resolvido (em
-                algumas linguagens) junto
+                este item geralmente possui um id (que não existe por existir, mas para diferenciar um do outro)
               </li>
+              <li class="fragment fade-up">é um domínio rico, tem uma razão de existir</li>
             </ul>
-            <aside>
+            <aside class="notes">
               os mais puristas dizem que entidade não deveria ter os gets/sets, mas sim suas acoes (historicamente, a
               ideia de gets/sets vem de modelar o sistema com base no banco...)
             </aside>
           </section>
           <section>
-            <h6>
-              Cada contexto tem as proprias entidades. Posso ter a entidade "Cliente" em mais de um contexto, ou uma
-              entidade pode aparecer em diversos contextos com nomes diferentes
-            </h6>
-          </section>
-        </section>
-        <section>
-          <h2>Exemplo: Cadastro de usuário</h2>
-
-          <section>
-            <h5>Qual o tipo de dado?</h5>
-            <ul class="fragment fade-up">
-              <li>nome</li>
-              <li>cpf</li>
-              <li>email</li>
+            <ul>
+              <li>Cada contexto tem suas próprias entidades</li>
+              <li class="fragment fade-up">Posso ter a entidade "Cliente" em mais de um contexto</li>
+              <li class="fragment fade-up">uma entidade pode aparecer em diversos contextos com nomes diferentes</li>
             </ul>
           </section>
+          <section>
+            <h3>Exemplo: Cadastro de usuário</h3>
+
+            <h5>Qual o tipo de dado?</h5>
+            <ul class="fragment fade-up">
+              <li class="fragment fade-up">nome</li>
+              <li class="fragment fade-up">cpf</li>
+              <li class="fragment fade-up">email</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>tipo primitivo? (string, int etc)?</li>
+              </ul>
+            </aside>
+          </section>
         </section>
-        <section>
-          <h2>Objeto de Valor (Value Object - VO)</h2>
+        <section data-background="img/value.jpg" data-background-opacity="0.2">
+          <h2>Objeto de Valor</h2>
           <ul>
-            <li class="fragment fade-up">classe que não tem identidade unica, é usada como auxiliar</li>
+            <li class="fragment fade-up">classe que não tem identidade única, é usada como auxiliar</li>
             <li class="fragment fade-up">(parar de usar tipos primitivos para tudo)</li>
             <li class="fragment fade-up">CPF -> possui validação própria</li>
             <li class="fragment fade-up">E-Mail -> possui validação própria</li>
           </ul>
         </section>
-        <section>
+        <section data-background="img/value-objects.jpg">
+          <aside class="notes">
+            <ul>
+              <li>Favorecer Objetos de Valor em vez de tipos primitivos</li>
+            </ul>
+          </aside>
+        </section>
+        <section data-background="img/motoboy.jpg" data-background-opacity="0.2">
           <h2>Aggregates</h2>
           <section>
             <ul>
               <li class="fragment fade-up">Relação Pedido x item</li>
-              <li class="fragment fade-up">Pedido possui n itens</li>
+              <li class="fragment fade-up">Pedido possui N itens</li>
               <li class="fragment fade-up">Item só existe se existir pedido</li>
             </ul>
-          </section>
+            <aside class="notes">
+              <ul>
+                <li>Representa uma entidade múltipla, uma relação entre as entidades</li>
+                <li>Ex: Sempre persiste o pedido e o item, nunca somente o item</li>
+              </ul>
+            </aside>
+            </section>
           <section>
-            <h5>Pedido: Raiz, por onde o processo começa</h5>
             <ul>
+              <li>Pedido: Raiz, por onde o processo começa</li>
               <li class="fragment fade-up">Pedido: Root Aggregate</li>
             </ul>
           </section>
         </section>
-        <section>
+        <section data-background="img/repository.jpeg" data-background-opacity="0.2">
           <h2>Repositório</h2>
           <section>
             <ul>
               <li class="fragment fade-up">Parte responsável por persistir as entidades</li>
-              <li class="fragment fade-up">geralmente existe apenas para o aggregate root</li>
-              <li class="fragment fade-up">ex: eu persisto o pedido, não o item</li>
+              <li class="fragment fade-up">Geralmente existe apenas para o aggregate root</li>
+              <li class="fragment fade-up">Ex: eu persisto o pedido, não o item</li>
             </ul>
           </section>
         </section>
-        <section>
+        <section data-background="img/service.png" data-background-opacity="0.1">
           <h2>Service</h2>
           <ul>
             <li class="fragment fade-up">Operação que não é uma parte natural de uma Entidade ou Objeto de Valor</li>
@@ -286,6 +340,14 @@
             <li class="fragment fade-up">É uma operação definida em termos de outros elementos do modelo</li>
             <li class="fragment fade-up">Geralmente é uma operação stateless</li>
           </ul>
+          <aside class="notes">
+            <ul>
+              <li>Ações como processar pagamento</li>
+              <li>É necessário se comunicar com o banco</li>
+              <li>Aguardar processamento</li>
+              <li>Marcar pedido como pago</li>
+            </ul>
+          </aside>
         </section>
         <section data-background="img/ddd.gif" data-background-opacity="0.5">
           <h1>Obrigado</h1>
@@ -340,13 +402,13 @@ quando td mundo está entendo td, se comunicando bem:
 subáreas do sistema que possuem complexidade e muitas regras
 
 ex: netflix
-dominio principal: video
-sub dominio: negociar licenciamento com empresas (Warner, Paramount)
-sub dominio: fechar contratos
-sub dominio: transcoding do video
+domínio principal: video
+sub domínio: negociar licenciamento com empresas (Warner, Paramount)
+sub domínio: fechar contratos
+sub domínio: transcoding do video
 
 
-sub dominio: refle muito no como a empresa vai funcionar
+sub domínio: refle muito no como a empresa vai funcionar
 
 
 linguagem muito diferente de acordo com a situacão e o contexto
@@ -368,15 +430,15 @@ identificar contextos: (lugares que usam o mesmo nome para coisas diferentes, ou
 
 4. definir a comunicação entre os contextos
 
-- quais são as partes do dominio principal
-- quais são os dominios auxiliares?
+- quais são as partes do domínio principal
+- quais são os domínios auxiliares?
 
 
-identificar relações entre os dominios
+identificar relações entre os domínios
 
 5. context map
 
-mapa que detalha a relação entre os dominios
+mapa que detalha a relação entre os domínios
 
 - possibilita uma visão geral do sistema
 - separar os pontos de complexidade
@@ -417,7 +479,7 @@ este item geralmente possui um id (que não existe por existir, mas para diferen
 os mais puristas dizem que entidade não deveria ter os gets/sets, mas sim suas acoes
 (historicamente, a ideia de gets/sets vem de modelar o sistema com base no banco...)
 
-entidade é um dominio rico, tem uma razão de existir
+entidade é um domínio rico, tem uma razão de existir
 
 
 Video: filme -> alugar, mudar preco, dar um desconto
@@ -504,11 +566,11 @@ utilizar camadas no código não quer dizer que está usando DDD
 # o que é ddd
 
 - conjunto de principios com foco em
-- dominio
+- domínio
 - exploracão de modelos
 - definir linguagem ubiqua baseada em um contexto
 
-# dominio (razão do software existir)
+# domínio (razão do software existir)
 
 o coração do negócio (razão do negócio existir)
 tem base em um conjunto de ideias, conhecimento e processos
@@ -608,7 +670,7 @@ ex: Cliente
 (entidade que pode existir em vários contextos, cada uma com uma implementação diferente)
 
 
-- forma de definir contexto: utilização de histórias e levantar escopo com um expert de dominio
+- forma de definir contexto: utilização de histórias e levantar escopo com um expert de domínio
 (falar com quem conhece, pessoas do departamento específico, com o PO etc)
 
 
@@ -660,17 +722,17 @@ ações
 
 - onde vou definir os contextos a serem utilizados no sistema
 
-dominio principal: video, catalogo
-dominio genérico (ajuda no processo, faz com que o dominio principal funcione - sistema poderia funcionar sem ele): pagamento, assinatura, perfil, minha lista
-dominio auxiliar (auxilia tudo a funcionar, principais e genericos): autenticacão
+domínio principal: video, catalogo
+domínio genérico (ajuda no processo, faz com que o domínio principal funcione - sistema poderia funcionar sem ele): pagamento, assinatura, perfil, minha lista
+domínio auxiliar (auxilia tudo a funcionar, principais e genericos): autenticacão
 
-razão de existir: ver o catalogo e assistir um video (somente dominios principais)
+razão de existir: ver o catalogo e assistir um video (somente domínios principais)
 
 - catálogo
 - video
 
 - assinatura
-- pagamento: dominio genérico (ajuda no processo, faz com que o dominio principal funcione)
+- pagamento: domínio genérico (ajuda no processo, faz com que o domínio principal funcione)
 - perfil
 - minha lista
 
@@ -683,7 +745,7 @@ razão de existir: ver o catalogo e assistir um video (somente dominios principa
 - organizar da melhor forma possível
 
 catálogo tem relação forte com perfil (catálogo muda de acordo com perfil)
-- por ser um dominio principal, o catálogo não muda, as outras entidades é que mudam (perfil)
+- por ser um domínio principal, o catálogo não muda, as outras entidades é que mudam (perfil)
 
 
 
