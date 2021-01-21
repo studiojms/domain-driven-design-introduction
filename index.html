@@ -49,6 +49,16 @@
               <li class="fragment fade-up">Não se trata apenas de criar camadas, entidades, repositórios etc</li>
               <li class="fragment fade-up">Design guiado pelo domínio (razão da aplicação existir)</li>
             </ul>
+            <aside class="notes">
+              <h4>Problemas que DDD resolve</h4>
+              <ul>
+                <li>construir software focando no problema de negócio e não problema tecnológico</li>
+                <li>
+                  Quando há problemas, o problema do software é por causa do negócio ou por causa da tecnologia
+                  escolhida?
+                </li>
+              </ul>
+            </aside>
           </section>
         </section>
         <section data-background="img/ddd-no-background.png" data-background-opacity="0.1">
@@ -82,6 +92,10 @@
             <li class="fragment fade-up">tem base em um conjunto de ideias, conhecimento e processos</li>
             <li class="fragment fade-up">sem domínio, os processos auxiliares não tem muita utilidade</li>
           </ul>
+          <aside class="notes">
+            Netflix: De que adianta ter a parte de faturamento bem resolvida, se a parte principal, que é transmissão de
+            vídeo, não funcionar?
+          </aside>
         </section>
         <section data-background="img/problem.jpg" data-background-opacity="0.2">
           <h3>Para resolver o problema de negócio, não precisamos necessariamente de código</h3>
@@ -96,8 +110,19 @@
             </ul>
           </section>
           <section>
-            <h3>linguagem ubíqua</h3>
             <img src="img/ubiquitous-1.png" />
+            <aside class="notes">
+              <ul>
+                <li>
+                  Cliente: Quando é uma operação interestadual, o destino tem que recolher DIFAL. Já no caso de
+                  substituição tributária você precisa calcular o ICMS considerando a base de cálculo...
+                </li>
+                <li>
+                  Dev: Vamos criar instâncias de cada classe para que os objetos reajam quando o observer iterar uma
+                  lista
+                </li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h3>linguagem ubíqua</h3>
@@ -105,13 +130,12 @@
               <li class="fragment fade-up">é a linguagem falada no dia a dia no contexto da empresa</li>
               <li class="fragment fade-up">utiliza as terminologias da realidade do negócio</li>
               <li class="fragment fade-up">desenvolvedores precisam conhecer a fundo a linguagem do negócio</li>
-              <li class="fragment fade-up">objetivo: conseguir modelar o sistema para representar o negócio
-                real</li>
+              <li class="fragment fade-up">objetivo: conseguir modelar o sistema para representar o negócio real</li>
             </ul>
           </section>
           <section>
             <h3>linguagem ubíqua</h3>
-            <div>O que é <q>Cliente</q>?</div>
+            <div>Exemplo: O que é <q>Cliente</q>?</div>
             <ul>
               <li class="fragment fade-up">quem loga no sistema?</li>
               <li class="fragment fade-up">quem compra algum produto?</li>
@@ -211,7 +235,12 @@
             </ul>
           </section>
           <section>
-            <img class="r-frame" style="background-color: rgb(31 31 31 / 70%);" src="img/context-map.png" alt="Context Map" />
+            <img
+              class="r-frame"
+              style="background-color: rgb(31 31 31 / 70%)"
+              src="img/context-map.png"
+              alt="Context Map"
+            />
             <aside class="notes">
               <ul>
                 <li>tipos de relações entre os contextos</li>
@@ -244,13 +273,20 @@
           </section>
           <section>
             <ul>
-              <li class="fragment fade-up">tudo baseado na linguagem criada antes de chegar no código</li>
+              <li>tudo baseado na linguagem criada antes de chegar no código</li>
               <li class="fragment fade-up">só começa o código quando a complexidade for definida e entendida</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Dúvida: E como fica no processo do agile? A ideia é ser iterativo e incremental.</li>
+                <li>Se eu fico só no domínio, não produzo código, não tenho entrega</li>
+                <li>DDD viria antes de iniciar o código, aprendendo sobre o domínio</li>
+              </ul>
+            </aside>
           </section>
           <section data-background="img/effort.jpg" data-background-opacity="0.4">
             <ul>
-              <li>a maior parte do esforço vai na parte de entender a complexidade</li>
+              <li>A maior parte do esforço está na parte de entender a complexidade</li>
             </ul>
           </section>
         </section>
@@ -276,12 +312,22 @@
               <li class="fragment fade-up">Posso ter a entidade "Cliente" em mais de um contexto</li>
               <li class="fragment fade-up">uma entidade pode aparecer em diversos contextos com nomes diferentes</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>entidade é um domínio rico, tem uma razão de existir</li>
+                <li>Video: filme -> alugar, mudar preco, dar um desconto</li>
+                <li>
+                  entidade não existe para ser persistida... persistencia é outro problema que acaba sendo resolvido (em
+                  algumas linguagens) junto
+                </li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h3>Exemplo: Cadastro de usuário</h3>
 
             <h5>Qual o tipo de dado?</h5>
-            <ul class="fragment fade-up">
+            <ul>
               <li class="fragment fade-up">nome</li>
               <li class="fragment fade-up">cpf</li>
               <li class="fragment fade-up">email</li>
@@ -358,8 +404,38 @@
             </ul>
           </aside>
         </section>
-        <section data-background="img/ddd-diagram.png" data-background-opacity="0.2">
+        <section data-background="img/conclusao.jpg" data-background-opacity="0.2">
+          <h2>Conclusão</h2>
+          <ul>
+            <li class="fragment fade-up">DDD é bastante amplo</li>
+            <li class="fragment fade-up">Foco no negócio</li>
+            <li class="fragment fade-up">Não se prende a uma tecnologia específica (não é framework da moda)</li>
+            <li class="fragment fade-up">Não é só trabalhar com <code>services</code> e <code>repositories</code></li>
+          </ul>
+          <aside class="notes">Estes são alguns pontos de introdução sobre DDD, porém há muito mais</aside>
+        </section>
+        <section data-background="img/ddd-books-background.jpeg" data-background-opacity="0.2">
+          <h2>Para saber mais</h2>
+          <ul>
+            <a
+              href="https://www.amazon.com.br/dp/B00794TAUG"
+              target="blank"
+            >
+              <li>Domain Driven Design - Eric Evans</li>
+            </a>
+            <a
+              href="https://www.amazon.com.br/dp/B01JJSGE5S"
+              target="blank"
+            >
+              <li>Domain Driven Design Distilled - Vernon Vaughn</li>
+            </a>
+          </ul>
+        </section>
+        <section data-background="img/ddd-diagram.png" data-background-opacity="0.15">
           <h1>Obrigado</h1>
+
+          Apresentação disponível em:
+          <a href="https://studiojms.github.io/domain-driven-design-introduction">https://studiojms.github.io/domain-driven-design-introduction</a>
         </section>
       </div>
     </div>
